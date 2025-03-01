@@ -15,7 +15,8 @@ app.use(cookieParser())
 // app.use(cors())
 app.use(
     cors({
-        origin: "http://localhost:5173", // Frontend URL
+        // origin: "http://localhost:5173", // Frontend URL
+        origin: "https://chat-application-frontend-qnfx.onrender.com", // Frontend URL
         // origin: "https://chat-application-1-6ix7.onrender.com", 
         credentials: true, // Allow cookies
     })

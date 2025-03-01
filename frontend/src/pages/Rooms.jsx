@@ -14,7 +14,7 @@ const Rooms = () => {
     useEffect(() => {
         // Check if token is available before establishing socket connection
         if (token) {
-            const newSocket = io("http://localhost:3000", {
+            const newSocket = io("https://chat-application-16sl.onrender.com", {
                 withCredentials: true,
                 extraHeaders: {
                     token: token,
@@ -41,7 +41,7 @@ const Rooms = () => {
 
     const fetchRooms = async () => {
         try {
-            const response = await axios.get("http://localhost:3000/api/auth/rooms");
+            const response = await axios.get("https://chat-application-16sl.onrender.com/api/auth/rooms");
             setRooms(response.data.data);
         } catch (error) {
             console.error("Error fetching rooms:", error);

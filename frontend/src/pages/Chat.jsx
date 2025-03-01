@@ -24,7 +24,7 @@ const Chat = () => {
   // Join room on component mount
   useEffect(() => {
     if (token) {
-      const newSocket = io("http://localhost:3000", {
+      const newSocket = io("https://chat-application-16sl.onrender.com", {
         withCredentials: true,
         extraHeaders: {
           token: token,
@@ -252,7 +252,7 @@ const Chat = () => {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:3000/api/auth/logout",
+        "https://chat-application-16sl.onrender.com/api/auth/logout",
         {},
         { withCredentials: true }
       );

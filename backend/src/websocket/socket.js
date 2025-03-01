@@ -7,7 +7,8 @@ const Room = require('../models/Room.model');
 function initializeSocket(server) {
     const io = new Server(server, {
         cors: {
-            origin: "http://localhost:5173",
+            // origin: "http://localhost:5173",
+            origin: "https://chat-application-frontend-qnfx.onrender.com",
             // origin: "https://chat-application-1-6ix7.onrender.com",
             methods: ["GET", "POST"],
             credentials: true,
